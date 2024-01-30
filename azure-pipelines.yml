@@ -12,7 +12,12 @@ pool:
 steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
-    ConnectionType: 'AzureRM'
+    ConnectionType: 'AzureRm'
     appType: 'webApp'
-    WebAppName: 
+    WebAppName: 'susmitha'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'My_Susmitha'
+    SlotName: 'production'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    enableCustomDeployment: true
+    DeploymentType: 'webDeploy'
